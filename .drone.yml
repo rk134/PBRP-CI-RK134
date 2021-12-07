@@ -1,0 +1,14 @@
+kind: pipeline
+name: PBRP-RK134-TESTING
+
+steps:
+- name: Getting retarded
+  image: najahi/oven:latest
+  environment: 
+    ID:
+      from_secret: ID
+    BOT_API_KEY:
+      from_secret: BOT_API_KEY
+
+  commands:
+    - bash run.sh

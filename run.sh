@@ -1,4 +1,4 @@
-mkdir twrp
+mkdir twrp 
 cd twrp
 repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11 --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
 repo sync -j4

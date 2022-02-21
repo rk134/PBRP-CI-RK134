@@ -6,8 +6,8 @@ repo sync -j4
 git clone https://github.com/rk134/recovery_xiaomi_vince.git -b twrp-11 device/xiaomi/vince
 cd twrp
 . build/envsetup.sh && lunch twrp_vince-eng && export ALLOW_MISSING_DEPENDENCIES=true && mka recoveryimage
-cd out/target/product/*
-curl -F document="*.img" "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendDocument" \
+cd $(pwd)/out/target/product/vince
+curl -F document=@"*.img" "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendDocument" \
 			-F chat_id=$ID \
 export ID=$CHANNEL_ID
 export TELEGRAM_TOKEN=$BOT_API_KEY

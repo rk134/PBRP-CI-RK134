@@ -2,11 +2,11 @@ kind: pipeline
 name: PBRP-RK134-TESTING
 
 steps:
-- name: Getting retarded
-  image: najahi/oven:latest
+- name: cooked
+  image: anggit86/dev:latest
   environment: 
-    ID:
-      from_secret: ID
+    CHANNEL_ID:
+      from_secret: CHANNEL_ID
     BOT_API_KEY:
       from_secret: BOT_API_KEY
 

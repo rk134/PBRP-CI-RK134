@@ -9,5 +9,5 @@ cd twrp
 cd out/target/product/*
 curl -F document="*.img" "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendDocument" \
 			-F chat_id=$ID \
-export ID=$ID
-export BOT_API_KEY=$BOT_API_KEY
+export ID=$CHANNEL_ID
+export TELEGRAM_TOKEN=$BOT_API_KEY
